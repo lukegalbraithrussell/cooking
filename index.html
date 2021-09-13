@@ -139,18 +139,20 @@ li {
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
+
   <div class="column sweet">
     <div class="content">
-	<a id ="myBtn">
-      <img src="biscuits.jpg" alt="Mountains" style="width:100%">
+
+	<a id ="myBtn1" class="myBtn">
+      <img src="biscuits.jpg" style="width:100%">
       <h4 >Buttermilk Biscuits</h4>
 		<!-- The Modal -->
-		<div id="myModal" class="modal">
+		<div id="myModal1" class="modal">
 		<!-- Modal content -->
-		<div class="modal-content">
+		<div id="content1" class="modal-content">
 			<span class="close">&times;</span>
-			<h1 >Buttermilk Biscuits</h1>
-			<p>This is a simplified recipe that is inspired from <a href="https://www.youtube.com/watch?v=BhXLxDctHL8">Adam</a> Ragusea&#39;s <a href="https://www.youtube.com/watch?v=fZkeXyUTRfc">biscuits</a>. I don&#39;t remember which video I based the recipe on but both are good to watch for visual cues. </p>
+			<h1>Buttermilk Biscuits</h1>
+      <p>This is a simplified recipe that is inspired from <a href="https://www.youtube.com/watch?v=BhXLxDctHL8">Adam</a> Ragusea&#39;s <a href="https://www.youtube.com/watch?v=fZkeXyUTRfc">biscuits</a>. I don&#39;t remember which video I based the recipe on but both are good to watch for visual cues. </p>
 			<h2 id="supplies">Supplies</h2>
 			<ul>
 			<li>1 measuring cup</li>
@@ -190,13 +192,61 @@ li {
 			<li>use whole wheat flour if you want sad biscuits that aren&#39;t that good</li>
 			<li>Bake on racks if you want them to envelop the racks on both sides sorta like kebabs and be annoying to get off</li>
 			</ul>
-
-		</div>
-	</a>
-
-</div>
     </div>
   </div>
+  </a>
+  
+    </div>
+  </div>
+
+
+  <div class="column savory">
+    <div class="content">
+
+	<a id ="myBtn2" class="myBtn">
+      <img src="eggsbenedict.png" style="width:100%">
+      <h4 >Eggs Hemingway</h4>
+		<!-- The Modal -->
+		<div id="myModal2" class="modal">
+		<!-- Modal content -->
+		<div id="content2" class="modal-content">
+			<span class="close">&times;</span>
+			<h1 id="eggs-hemingway">Eggs Hemingway</h1>
+      <p>This is a simplified version since I&#39;m not using hollandaise sauce, instead using a flavored compound butter and relying on the poached egg yolk to be enough yolk. </p>
+      <p>Idea is from <a href="https://www.youtube.com/watch?v=yHEl5sUebhk">Chef John</a> but I use homemade biscuits instead of English muffins. </p>
+      <h2 id="supplies">Supplies</h2>
+      <ul>
+      <li>Pot</li>
+      <li>Timer</li>
+      <li>Mezzaluna (or anything sharp lol)</li>
+      <li>Slotted spoon</li>
+      </ul>
+      <h2 id="ingredients">Ingredients</h2>
+      <ul>
+      <li>1 egg</li>
+      <li>Pre-packaged smoked salmon</li>
+      <li>Biscuit (from my other recipe!)</li>
+      <li>Dill</li>
+      <li>Butter</li>
+      <li>Lemon zest</li>
+      <li>Pepper</li>
+      <li>Rice vinegar</li>
+      </ul>
+      <h2 id="steps">Steps</h2>
+      <ul>
+      <li>Chop up dill and zest</li>
+      <li>Mix butter, dill, zest and pepper</li>
+      <li>Bring pot of water to a simmer, add splash of rice vinegar</li>
+      <li>Cook poached egg in simmering water for 5 minutes</li>
+      <li>Pull egg out with slotted spoon</li>
+      <li>Spread butter on biscuit, place salmon, then egg</li>
+      </ul>
+
+    </div>
+  </div>
+  </a>
+  
+    </div>
   </div>
 <!-- END GRID -->
 </div>
@@ -249,30 +299,34 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementsByClassName('modal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementsByClassName("myBtn");
+
+document.write(btn[0]);
+console.log(btn);
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close");
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn[0].onclick = function() {
+    modal[0].style.display = "block";
 }
 
+btn[4].onclick = function() {
+    modal[1].style.display = "block";
+}
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span[0].onclick = function() {
+    modal[0].style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+span[1].onclick = function() {
+    modal[1].style.display = "none";
 }
 </script>
 
