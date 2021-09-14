@@ -58,6 +58,7 @@ body {
 .content {
   background-color: white;
   padding: 10px;
+  height: 300px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -111,8 +112,20 @@ li {
   width: 70%;
   text-align: left;
   font-size: 14px;
+}
 
+.modal.open {
+   display: block;
+}
 
+.close:active ~ .modal {
+  display: none;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
 }
 
 /* The Close Button */
@@ -165,7 +178,7 @@ li {
     <div class="content">
 
 	<a id ="myBtn1" class="myBtn">
-      <img src="biscuits.jpg" style="width:100%">
+      <img src="biscuits.jpg">
       <h4 >Buttermilk Biscuits</h4>
 		<!-- The Modal -->
 		<div id="myModal1" class="modal">
@@ -225,7 +238,7 @@ li {
     <div class="content">
 
 	<a id ="myBtn2" class="myBtn">
-      <img src="eggsbenedict.png" style="width:100%">
+      <img src="eggsbenedict.png">
       <h4 >Eggs Hemingway</h4>
 		<!-- The Modal -->
 		<div id="myModal2" class="modal">
@@ -269,6 +282,92 @@ li {
   
     </div>
   </div>
+
+
+
+  <div class="column sweet">
+    <div class="content">
+
+	<a id ="myBtn3" class="myBtn">
+      <img src="frenchtoast.png">
+      <h4 >Strawberry French Toast</h4>
+		<!-- The Modal -->
+		<div id="myModal3" class="modal">
+		<!-- Modal content -->
+		<div id="content3" class="modal-content">
+			<span class="close">&times;</span>
+
+      <h1 id="strawberry-french-toast">Strawberry French Toast</h1>
+      <h2 id="supplies">Supplies</h2>
+      <ul>
+      <li>Mixing Bowl (helps if put in freezer beforehand)</li>
+      <li>Knife</li>
+      <li>1-cup measuring cup</li>
+      <li>2 baking sheets</li>
+      <li>Oven-safe cooling rack</li>
+      <li>Whisk (I use an immersion blender whisk attachment)</li>
+      <li>Tongs</li>
+      <li>A pie pan (flat surface is good for soaking bread in batter, ty @altonbrown)</li>
+      <li>Paper towels to set the cracked egg shells on to prevent counter contamination</li>
+      </ul>
+      <h2 id="ingredients">Ingredients</h2>
+      <h3 id="toast">Toast</h3>
+      <p><em>Honestly I eyeball everything except the buttermilk and eggs. That&#39;s the only ratio that needs to stay consistent</em> </p>
+      <ul>
+      <li>1 cup buttermilk</li>
+      <li>3 eggs</li>
+      <li>1 swish of vanilla</li>
+      <li>1 loaf of challah bread</li>
+      <li>~1/4 stick of Butter</li>
+      <li>1 tspn Salt</li>
+      <li>Crushed corn flakes</li>
+      </ul>
+      <h3 id="whipped-cream">Whipped cream</h3>
+      <ul>
+      <li>1/2 to 1 cup cream</li>
+      <li>Strawberries</li>
+      <li>Sugar if needed for strawberries, anywhere from a spoonful to even a 1/4 cup</li>
+      </ul>
+      <h2 id="steps">Steps</h2>
+      <h3 id="french-toast">French Toast</h3>
+      <ol>
+      <li>Day before: cut challah bread into 1 inch thick slices and leave out to stale</li>
+      <li>Preheat oven to 350</li>
+      <li>Place rack on baking pan, put in oven</li>
+      <li>Crush cornflakes with rolling pin on other baking pan.</li>
+      <li>Whisk together cream, eggs, vanilla, salt in pie pan</li>
+      <li>Dip bread in mixture for 45sec each side, flip with tongs</li>
+      <li><p>Dredge bread in crushed cornflakes</p>
+      </li>
+      <li><p>Fry toast in medium low heat, 1 tablespoon of butter until golden brown on each side</p>
+      </li>
+      <li>I also like to hit the edges like I&#39;m searing a steak but that probably doesn&#39;t do anything</li>
+      <li>Store in oven until ready (If it&#39;s suuuuper long wait maybe turn off the oven)<ul>
+      <li>I lowkey think these are better the next day when you reheat them in the toaster oven, the butter smells even better somehow</li>
+      </ul>
+      </li>
+      </ol>
+      <h3 id="whipped-cream">Whipped Cream</h3>
+      <ol>
+      <li>Dice strawberries; I like slicing them so each one is a circle because they look like flowers</li>
+      <li>Add sugar if the strawberries are too tart; the earlier you do this the more juices will be drawn out which will make the whipped cream more pink</li>
+      <li>Put cream in (preferably cold) mixing bowl</li>
+      <li>Mix for a few minutes until medium(?) peaks form</li>
+      <li>Fold strawberries into whipped cream</li>
+      </ol>
+
+
+    </div>
+  </div>
+  </a>
+  
+    </div>
+  </div>
+
+
+
+
+  
 <!-- END GRID -->
 </div>
 
@@ -320,16 +419,10 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
 // Get the modal
 var modal = document.getElementsByClassName('modal');
-
 // Get the button that opens the modal
 var btn = document.getElementsByClassName("myBtn");
-
-document.write(btn[0]);
-console.log(btn);
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close");
 
@@ -341,14 +434,20 @@ btn[0].onclick = function() {
 btn[4].onclick = function() {
     modal[1].style.display = "block";
 }
-// When the user clicks on <span> (x), close the modal
-span[0].onclick = function() {
-    modal[0].style.display = "none";
+
+btn[8].onclick = function() {
+    modal[2].style.display = "block";
 }
 
-span[1].onclick = function() {
-    modal[1].style.display = "none";
+for (let i = 0; i < modal.length; i++) {
+  // When the user clicks on the backdrop or close span, close it
+  modal[i].onclick = function(e) {
+    if ([span[i]].includes(e.target)) {
+      modal[i].style.display = "none";
+    }
+  };
 }
+
 </script>
 
 </body>
