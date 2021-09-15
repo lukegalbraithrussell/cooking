@@ -122,6 +122,7 @@ img {
   object-fit: cover;
   width: 100%;
   height: 70%;
+  cursor: pointer;
 }
 
 /* The Close Button */
@@ -175,7 +176,7 @@ img {
 
 	<a id ="myBtn1" class="myBtn">
       <img src="biscuits.jpg">
-      <h4 >Buttermilk Biscuits</h4>
+      <h4 style='cursor: pointer;'>Buttermilk Biscuits</h4>
 		<!-- The Modal -->
 		<div class="modal">
 		<!-- Modal content -->
@@ -235,7 +236,7 @@ img {
 
 	<a class="myBtn">
       <img src="eggsbenedict.png">
-      <h4 >Eggs Hemingway</h4>
+      <h4 style='cursor: pointer;'>Eggs Hemingway</h4>
 		<!-- The Modal -->
 		<div class="modal">
 		<!-- Modal content -->
@@ -286,7 +287,7 @@ img {
 
 	<a class="myBtn">
       <img src="frenchtoast.png">
-      <h4 >Strawberry French Toast</h4>
+      <h4 style='cursor: pointer;'>Strawberry French Toast</h4>
 		<!-- The Modal -->
 		<div class="modal">
 		<!-- Modal content -->
@@ -423,9 +424,9 @@ btn[9].onclick = function() {
 }
 
 for (let i = 0; i < modal.length; i++) {
-  // When the user clicks on the backdrop or close span, close it
+// When the user clicks on the backdrop or close span, close it
   modal[i].onclick = function(e) {
-    if ([span[i]].includes(e.target)) {
+    if ([modal[i], span[i]].includes(e.target)) {
       modal[i].style.display = "none";
     }
   };
