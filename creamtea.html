@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cream tea</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            /* background: white; */
+        }
+
+        .card {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+# Cream tea
+AKA me trying to validate my British citizenship
+
+Mainly taken from a [BBC scone recipe](https://www.bbcgoodfood.com/recipes/fruit-scones) and a [Curious Cuisinière clotted cream recipe](https://www.curiouscuisiniere.com/clotted-cream/)
+
+## Supplies 
+* mixing bowl
+* knife
+* ~9 inch casserole dish
+* tablespoon measure
+* 1/4 teaspoon measure, or a contentness with just doing a few pinches
+* 1 teaspoon measure, or a contentness with a "glug" as an acceptable measurement
+* a glass liquid measuring cup, or anything that you can measure 3/4 cup liquid with
+            
+## Ingredients
+_I kept the flour in weight because flour density is so variable by recipe. But it should really be more of a feel thing anyway. Real useful in this non-visual recipe, I know. Watch [Atomic Shrimp's video](https://www.youtube.com/watch?v=DAv_QlHtT5c) for visual cues._
+
+### Clotted cream
+* 2 cups heavy whipping cream
+
+### Scones
+* 350g (~3 cups) flour
+* 2 tbsp baking powder
+* ¼ tsp salt
+* 6 tbsp butter
+* 3 tbsp sugar
+* 3/4 cup milk
+* 1 tsp vanilla extract
+* squeeze of lemon juice
+* anywhere from 1/2 cup to 3/4 cup raisins
+
+## Steps
+
+### Clotted cream
+
+#### Day before
+* Preheat oven to 200F (or lower if you can get it! lower just equals longer).
+* Pour **2 cups cream** into a ~9 inch casserole dish. I used glass and it was fine. 
+* Put cream in oven for 8-12 hours, uncovered. Pull it once it starts developing a slightly darker top. 
+* Cover and put in fridge overnight. 
+
+#### Day of
+* The cream will be split into a thick part and a liquidy part. Pull the thick part off and put in bowl and stir
+* You can use the liquidy part as a sub for milk in the scone recipe, or just ditch it. 
+
+### Scones
+* heat oven to 425 F
+* Warm **3/4 cup milk** in microwave for about 20 seconds
+* Add **1 tsp vanilla** and **squeeze of lemon juice** to warm milk. The lemon juice will curdle the milk.
+* Mix **350g flour**, **2 tbsp baking powder**, and **1/4 tsp salt** in a bowl
+* Chop and add **6 tbsp butter* - rub in with your fingers until the mix looks like fine crumbs
+* Mix in **3 tbsp sugar**
+* Mix in **~1/2 cup raisins** (I don't measure this, just toss em in)
+* Combine the two mixes. It'll seem too wet until it doesn't. But it'll still be pretty sticky
+* Put dough on floured surface and fold a few times, then flatten till it's ~2in deep
+* Cut into four scones
+* Brush the tops with beaten egg (I use milk tbh because this feels like a waste of an egg)
+* Bake for 10 mins until risen and golden on the top
+
+## Alternatives
+* Just use the biscuits recipe here. They're pretty similar, but I like going back and forth to try to figure out what causes the best rise (I'm still not satisfied with any rise on my scones/biscuits)
+* The raisins are kinda hit or miss with people. You can leave them out. 
+            </script>
+        </zero-md>
+
+    </div>
+
+</body>
+
+</html>

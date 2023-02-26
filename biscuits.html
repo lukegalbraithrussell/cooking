@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+<!-- Load the element definition -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buttermilk biscuits</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: Arial;
+		padding: 20px;
+		background: #f1f1f1;
+	}
+	
+	.header {
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+		/* background: white; */
+	}
+	
+	.card {
+		background-color: white;
+        margin: auto;
+        width: 50%;
+		padding: 20px;
+		margin-top: 20px;
+		overflow: hidden;
+		border-radius: 8px;
+	}
+	
+	@media screen and (max-width: 1100px) {
+		.card {
+			width: 50%;
+		}
+	}
+	
+	@media screen and (max-width: 800px) {
+		.card {
+			width: 100%;
+		}
+	}
+	</style>
+</head>
+
+<body>
+    <div class="card">
+
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+                # Buttermilk biscuits
+                
+                This is a simplified recipe that is inspired from Adam Ragusea's videos ([1](https://www.youtube.com/watch?v=BhXLxDctHL8) and [2](https://www.youtube.com/watch?v=fZkeXyUTRfc)). I don't remember which video I based the recipe on but both are good to watch for visual cues.
+                
+                ## Supplies 
+                * 1 measuring cup
+                * 1 tablespoon
+                * 1 teaspoon
+                * Mixing bowl (bonus points if it's cold from sitting in the freezer)
+                * Baking tray
+                * Parchment paper
+                            
+                ## Ingredients
+                * 2 cup flour
+                * 1 stick butter
+                * 5 tbsp cornstarch
+                * 1 heaping tbsp baking powder 
+                * 1 tsp salt 
+                * 2 tsp sugar
+                * 1 cup buttermilk, cold (obv you wouldn't use warm lol but keep it in fridge until last second)
+                
+                ## Steps
+                * Preheat oven to like 475ish. (I keep increasing it 5 degrees each time I do this lol)
+                * Mix **2 cups flour**, **5 tbsp cornstarch**, **1 heaping tbsp baking powder**, **1 tsp salt**, and **2 tsp sugar**)
+                * Grate **1 stick frozen butter** right inside the mixing bowl. Tap the box grater to make sure not too much is sticking to the sides (some definitely will; it's fine)
+                * Mix the butter with the flour mixture.
+                * Put in freezer for 15 minutes while oven preheats (Don't skip this!!! I did once and it was bad. We really don't want the butter to melt before it bakes)
+                * Barely mix in **1 cup buttermilk**. It’s okay if there’s still some flour in the bowl because you can use that for the next step!
+                * Mold it into a big lump, flour the surface, and roll it out to an inch thick. Flour the top, fold it over on itself, and roll it out again. Repeat for a total of seven folds. I always lose count, though.
+                * Cut out biscuits, probably squares to minimize trimmings
+                * Put the biscuits on a parchment-lined baking sheet. They won't expand outward so you'll be fine as long as they're not touching.
+                * Brush the tops with melted butter with a pastry brush. I always forget to do this step too
+                * Bake until puffy and golden, about 15 minutes.
+                * Take off baking sheet immediately so bottoms don't burn
+                
+                ## Variants
+                * Use whole wheat flour if you want sad biscuits that aren't that good
+                * Bake on racks if you want them to envelop the racks on both sides sorta like kebabs and be annoying to get off                
+                </script>
+          </zero-md>
+
+    </div>
+
+</body>
+
+</html>

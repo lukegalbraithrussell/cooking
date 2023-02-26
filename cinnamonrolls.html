@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinnamon rolls</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            /* background: white; */
+        }
+
+        .card {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+# Cinnamon rolls
+Basically just [Adam Ragusea's recipe](https://www.youtube.com/watch?v=m4YbL7dAfw8)
+
+## Supplies 
+* large mixing bowl
+* heatable bowl
+* rolling pin
+* small saucepan
+* whisk
+* 1/3 cup measure
+* 1/4 cup measure
+* a ramekin to put the egg in to YOINK the yolk out
+* a ramekin to melt butter in
+* 1/2 tspn measure, or contentness with just using a few pinches
+* 1 tbspn measure
+* baking sheet with parchment paper
+            
+## Ingredients
+### Dough
+* bread flour, about two cups
+* 1/3 cup milk
+* 1 packet instant dry yeast
+* 2 tablespoons butter
+* 1/4 cup sugar
+* 1 egg
+* 1/2 teaspoon salt
+* small glug of vanilla
+
+### Filling
+* 1/3 cup brown sugar
+* small pinch of salt
+* 1 tbsp melted butter
+* 1 tbsp ground cinnamon
+
+### Marshmallow glaze
+* 1 egg white (leftover from the dough)
+* 1/3 cup sugar
+* a squeeze of corn syrup
+* 1 tablespoon butter
+* a glug of vanilla
+
+## Steps
+
+### Dough
+* Warm the **1/3 cup milk** to body temperature in microwave, ~20 seconds
+* Stir in the **1 packet instant dry yeast** and let bloom
+* Melt **2 tbsp butter** in microwave, ~15 seconds.
+* Combine butter with **1/4 cup sugar**, **1/2 tsp salt** and **glug of vanilla** 
+* Separate the egg in ramekin, add yolk to butter mixture
+* Add as much flour as you can easily stir into the milk mixture with a spoon (**~3/4 cup**)
+* Add flour to butter mixture until it's a paste (**~1/2 cup**)
+* Let sit for a half hour. Milk dough will have puffed up
+* Combine the two doughs. If it's too dry, add a little bit more milk. If it's more than just a little sticky, add flour
+* Put in oven that you had on for a few minutes (so it's just a little warmer than the house) and let rise for a few hours
+
+### Filling
+* Melt **1 tbsp butter**
+* Combine **1/3 cup brown sugar**, **1 tbsp cinnamon** with butter. We're going for damp sand here. 
+* Roll out dough until about an inch thick. Make one edge thin.
+* Melt **1 tbsp butter**
+* Brush dough with some of the melted butter. Leave the thin edge alone
+* Spread sand-like mixture over dough. Keep leaving the thin edge alone
+* Brush water on thin edge
+* Roll up the dough, with the thin edge being the end. Make sure the thin edge is the bottom 
+* Cover with remaining butter
+
+### The show
+You could do everything before this the night before.
+* Slice the roll into individual pieces  
+* place on parchment-lined baking sheet 
+* Let them rise for a half hour again
+* Bake at 400ºF for 10 minutes
+
+### Marhsmallow glaze
+* whisk together **1 egg white**, **1/3 cup sugar** and **squeeze of corn syrup** over medium heat. It'll turn white and thick in like 5 minutes
+* Pull of heat, and whisk in **1 tbsp butter**. It's monter au beurre time
+* Add **glug of vanilla** 
+* Dip not-super-hot rolls face-up in glaze
+            </script>
+        </zero-md>
+
+    </div>
+
+</body>
+
+</html>
