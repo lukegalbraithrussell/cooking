@@ -1,6 +1,6 @@
 # French toast with strawberry whipped cream
 
-This is version 16 of my attempt to make french toast in a way that reminds me of [Sassy Onion](https://www.sassyonion.com) and [Word of Mouth](https://ilovewom.com/), both in Salem Oregon
+This is version 16 of my attempt to make french toast in a way that reminds me of [Sassy Onion](https://www.sassyonion.com) and [Word of Mouth](https://ilovewom.com/), both in Salem, Oregon.
 
 ## Supplies 
 * mixing bowl
@@ -22,7 +22,7 @@ _Honestly I eyeball everything except the buttermilk and eggs. That's the only r
 * 1 swish of vanilla
 * 1 loaf of challah bread (brioche works too)
 * 1/4 stick of butter
-* 1 tspn salt
+* 1 tsp salt
 * 1 cup crushed cornflakes
 
 * 1/2 - 1 cup cream
@@ -43,7 +43,7 @@ _Honestly I eyeball everything except the buttermilk and eggs. That's the only r
 * Heat oven to 350
 * Put cooling rack on baking sheet, and put in oven. If you don't have a cooling rack, just place baking sheet below one of the oven's racks
 * Pour ** 1 cup of cornflakes** on plate. Crush cornflakes with your fists or something heavy. A plastic bag can contain the mess but it'll usually tear anyway so I just crush them over the plate
-* Whisk together **1 cup buttermilk**, **3 eggs**, **1 swish vanilla**, and **1 tspn salt** in pie pan
+* Whisk together **1 cup buttermilk**, **3 eggs**, **1 swish vanilla**, and **1 tsp salt** in pie pan
 
 #### The show
 You'll be repeating these steps until you've used up all your slices
@@ -67,5 +67,5 @@ Do this once all your french toast is done and in the oven - this'll only take a
 
 * Use tongs if you like crushing your french toast
 * Use cream instead of buttermilk to cut down on ingredients to purchase! 
-* If you only have enough cream for the whipped cream, and no buttermilk, 1 cup of milk + 1 tbpsn of something acidic (vinegar or lemon juice) will get you there
+* If you only have enough cream for the whipped cream, and no buttermilk, 1 cup of milk + 1 tbps of something acidic (vinegar or lemon juice) will get you there
 * Use panko bread crumbs if you want something *incredibly* crunchy. I love me some crisp french toast, but this method from Adam Ragusea was just too much for me
