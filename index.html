@@ -1,344 +1,276 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luke's Cooking</title>
-<meta name="author" content="Luke Russell">
-<meta property="og:type" content="website">
-<meta property="og:image" content="Erina.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="manifest" href="favicons/site.webmanifest">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
-body {
-  background-color: #f1f1f1;
-  padding: 30px;
-  font-family: Arial;
-}
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-  font-size: 20px;
-}
 
-.row {
-  margin: 10px -16px;
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luke's Cooking</title>
+    <meta name="author" content="Luke Russell">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="pics/Erina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
+        body {
+            background-color: #f1f1f1;
+            padding: 30px;
+            font-family: Arial;
+        }
 
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        /* Center website */
 
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-  height: 300px;
-}
+        .main {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+        }
 
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
+        .row {
+            margin: 10px -16px;
+        }
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
+        /* Add padding BETWEEN each column */
 
-.btn:hover {
-  background-color: #ddd;
-}
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
 
-.btn.active {
-  background-color: #666;
-  color: white;
-}
+        /* Create three equal columns that floats next to each other */
 
-li {
-	margin: 10px 0;
-}
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none;
+            /* Hide all elements by default */
+        }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+        /* Clear floats after rows */
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 70%;
-  text-align: left;
-  font-size: 14px;
-}
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-.modal.open {
-   display: block;
-}
+        /* Content */
 
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 70%;
-  cursor: pointer;
-}
+        .content {
+            background-color: white;
+            padding: 10px;
+            height: 300px;
+        }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+        /* The "show" class is added to the filtered elements */
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+        .show {
+            display: block;
+        }
 
-@media screen and (max-width: 800px) {
-		.column {
-			width: 100%;
-		}
+        /* Style the buttons */
 
-    .modal-content {
-      width: 90%;
-	}
-}
-    
+        .card {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
 
-</style>
+        .card:hover {
+            background-color: #ddd;
+        }
+
+        .card.active {
+            background-color: #666;
+            color: white;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 70%;
+            cursor: pointer;
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                width: 100%;
+            }
+
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- MAIN (Center website) -->
-<div class="main">
+    <!-- MAIN (Center website) -->
+    <div class="main">
 
-<h2>Hello!</h2>
+        <h2>Hello!</h2>
+        <p>I just want to make Erina smile</p>
 
-<p>I just want to make Erina smile</p>
+        <div id="mycardContainer">
+            <button class="card active" onclick="filterSelection('all')"> Show all</button>
+            <button class="card" onclick="filterSelection('sweet')"> Sweet</button>
+            <button class="card" onclick="filterSelection('savory')"> Savory</button>
+        </div>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('sweet')"> Sweet</button>
-  <button class="btn" onclick="filterSelection('savory')"> Savory</button>
-</div>
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
 
-<!-- Portfolio Gallery Grid -->
-<div class="row">
+            <div class="column sweet">
+                <a href="biscuits.html">
+                    <div class="content">
+                        <div id="mycard1" class="mycard">
+                            <img src="pics/biscuits.jpg">
+                            <h4 style='cursor: pointer;'>Buttermilk biscuits</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-  <div class="column sweet">
-    <div class="content">
+            <div class="column savory">
+                <a href="eggsbenedict.html">
+                    <div class="content">
+                        <div class="mycard">
+                            <img src="pics/eggsbenedict.png">
+                            <h4 style='cursor: pointer;'>Eggs Hemingway</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-	<a id ="myBtn1" class="myBtn">
-      <img src="biscuits.jpg">
-      <h4 style='cursor: pointer;'>Buttermilk biscuits</h4>
-		<!-- The Modal -->
-		<div class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">&times;</span>
+            <div class="column sweet">
+                <a href="frenchtoast.html">
+                    <div class="content">
+                        <div class="mycard">
+                            <img src="pics/frenchtoast.png">
+                            <h4 style='cursor: pointer;'>Strawberry french toast</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
+            <div class="column sweet">
+                <a href="bananabread.html">
+                    <div class="content">
+                        <div class="mycard">
+                            <img src="pics/bananabread.png">
+                            <h4 style='cursor: pointer;'>Banana bread</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column sweet">
+                <a href="cinnamonrolls.html">
+                    <div class="content">
+                        <div class="mycard">
+                            <img src="pics/cinnamonrolls.jpg">
+                            <h4 style='cursor: pointer;'>Cinnamon rolls</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- END GRID -->
+        </div>
+
+        <!-- END MAIN -->
     </div>
-  </div>
-  </a>
-  
-    </div>
-  </div>
 
+    <script>
+        filterSelection("all")
 
-  <div class="column savory">
-    <div class="content">
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
 
-	<a class="myBtn">
-      <img src="eggsbenedict.png">
-      <h4 style='cursor: pointer;'>Eggs Hemingway</h4>
-		<!-- The Modal -->
-		<div class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h1 id="eggs-hemingway">Eggs Hemingway</h1>
-  
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
 
-    </div>
-  </div>
-  </a>
-  
-    </div>
-  </div>
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
 
-
-
-  <div class="column sweet">
-    <div class="content">
-      <a href="https://quickstarts.snowflake.com/guide/getting_started_external_functions_azure/index.html">
-	<div class="myBtn">
-    <a href="https://www.example.com">
-      <img src="frenchtoast.png">
-      <h4 style='cursor: pointer;'>Strawberry french toast</h4>
-    </div>
-  
-    </div>
-  </div>
-
-
-  <div class="column sweet">
-    <div class="content">
-
-	<a class="myBtn">
-      <img src="bananabread.png">
-      <h4 style='cursor: pointer;'>Banana bread</h4>
-		<!-- The Modal -->
-		<div class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">&times;</span>
-
-
-
-    </div>
-  </div>
-  </a>
-  
-    </div>
-  </div>
-
-
-
-  
-<!-- END GRID -->
-</div>
-
-<!-- END MAIN -->
-</div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-// Get the modal
-var modal = document.getElementsByClassName('modal');
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close");
-
-// When the user clicks the button, open the modal 
-btn[0].onclick = function() {
-    modal[0].style.display = "block";
-}
-
-btn[4].onclick = function() {
-    modal[1].style.display = "block";
-}
-
-btn[8].onclick = function() {
-    modal[2].style.display = "block";
-}
-
-
-btn[12].onclick = function() {
-    modal[3].style.display = "block";
-}
-
-/* add the next one here, btn[n+4] for... reasons... */
-
-for (let i = 0; i < modal.length; i++) {
-// When the user clicks on the backdrop or close span, close it
-  modal[i].onclick = function(e) {
-    if ([modal[i], span[i]].includes(e.target)) {
-      modal[i].style.display = "none";
-    }
-  };
-}
-
-</script>
+        // Add active class to the current button (highlight it)
+        var cardContainer = document.getElementById("mycardContainer");
+        var cards = cardContainer.getElementsByClassName("card");
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        
+    </script>
 
 </body>
+
 </html>

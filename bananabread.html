@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>French toast</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            /* background: white; */
+        }
+
+        .card {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+                # Chocolate chip banana bread
+Courtesy of my mother, original recipe from a Marcia Woehlbrandt, 1981. I've rounded measurements because accuracy is for competent people.
+
+## Supplies 
+* 1 bundt pan or, 5 small loaf pans (I do the latter)
+* a large mixing bowl
+* a whisk and biceps of steel, or a hand mixer
+* 10 fingers or a wooden spoon
+* 1 tsp 
+* 1/2 cup measuring cup
+* 1/3 cup measuring cup
+            
+## Ingredients
+* 1 stick + 3 tbsp softened butter
+* 5/3 cup sugar
+* 1 glug vanilla
+* 3 eggs 
+* 2/3 cup buttermilk
+* 3 ripe bananas
+
+* 5/2 cup flour
+* 1 heaping tsp baking soda
+* 1 heaping tsp baking powder
+* 1 tsp salt
+
+* 1 cup chopped walnuts
+* 1 cup chocolate chips
+
+## Steps
+* preheat oven to 350 (325 convection)
+* cream **1 stick + 3 tbsp butter** and **5/3 cup sugar**
+* bash **3 bananas** up, with your hands or a wooden spoon I guess if you're not feeling primal
+* add in **glug vanilla**, bananas, and **1/3 cup buttermilk** (half of the total buttermilk) and mix well
+* add **1 heaping tsp baking soda**, **1 heaping tsp baking powder**, **1 tsp salt**, and **5/2 cup flour** blend well
+* add **3 eggs** and remaining **1/3 cup buttermilk**, mix well
+* add **1 cup walnuts** and **1 cup chocolate chips**, blend by hand
+* butter and flour pans to prevent sticking (OR use the crumpled-up parchment paper trick)
+* pour batter into pans
+* bake: 50 - 55 minutes for bundt pan, 40 - 45 minutes for the small loaf pans
+* freeze any you won't eat in a few days
+
+## Variants
+* You can leave out the walnuts. I never put in walnuts. Who owns walnuts?? 
+            </script>
+        </zero-md>
+
+    </div>
+
+</body>
+
+</html>

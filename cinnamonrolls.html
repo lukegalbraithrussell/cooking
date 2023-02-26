@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>French toast</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            /* background: white; */
+        }
+
+        .card {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+                # Cinnamon rolls
+                For the dough
+* bread flour, about two cups
+* 1/3 cup milk
+* 1 packet yeast
+* 2 tablespoons (30g) butter
+* 1/4 cup (50g) sugar
+* 1 egg
+* half a teaspoon (3-4g) salt
+* small glug of vanilla
+
+For the filling
+
+* 1/3 cup brown sugar
+* small pinch of salt
+* 1 tbsp melted butter
+* 1 tbsp ground cinnamon
+
+For the marshmallow glaze
+
+* 1 egg white (leftover from the dough)
+* 1/3 cup sugar
+* a squeeze of corn syrup
+* 1 tablespoon butter
+
+* Warm the milk to body temperature, stir in the yeast and let bloom for a few minutes until frothy.
+* Melt the butter and stir in the sugar, salt and vanilla
+* Separate the egg, reserve the white for the glaze, and stir in the yolk
+
+* Stir as much flour as you can easily stir into the milk mixture with a spoon (it was a little less than a cup for me)
+* do the same with the butter mixture (mine took maybe 2/3 of a cup). 
+* Cover and let sit for about a half hour until the milk dough has puffed up a lot.
+
+* Knead the two doughs together until homogenous, dusting on additional flour as needed until you get a reasonably smooth dough that's just a little sticky. 
+* Cover and let rise until doubled, about 2 hours.
+
+* Combine brown sugar and cinnamon with some 1 tbsp melted butter. Be careful to add only enough melted butter to get a damp sand consistency
+
+* Roll dough out into a rectangle about a foot wide. Roll the bottom long end very thin — this will be the flap you use to seal the roll. 
+* Brush the surface with melted butter, avoiding that flat at the bottom. 
+* Put on the filling as evenly as possible, again avoiding the bottom flap. 
+* Smear some water on the bottom flap to serve as glue, then roll it up, starting from the thicker long end. Don't roll too tightly. Position the seam on the bottom of the roll, and maybe coat it with melted butter if you have some left. 
+
+At this point you could cover and refrigerate the roll until later.
+
+* Slice about 1.5 inches (4 cm) thick. 
+* Gently transfer the rolls to a parchment-lined baking sheet, cut-side-up. 
+* Cover them and let them proof one more time, about a half hour (definitely make time for this if you sliced the rolls straight from the refrigerator)
+
+* Bake at 400ºF/200ºC, 10+ minutes
+
+* Whisk continuously the egg white, sugar and syrup together in a saucepan over moderate heat until you get a mayonnaise-like consistency. 
+* Kill the heat and whisk the butter and vanilla as it slowly melts in. 
+
+Wait for the rolls cool and solidify for a few minutes before topping with the glaze — I just like to dunk the whole top of the roll straight into the pot.
+            </script>
+        </zero-md>
+
+    </div>
+
+</body>
+
+</html>

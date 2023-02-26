@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eggs benedict</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            /* background: white; */
+        }
+
+        .card {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <zero-md src="https://example.com/markdown.md">
+            <script type="text/markdown">
+                # Eggs Hemingway
+                This is a simplified version since I'm not using hollandaise sauce, instead using a flavored compound butter and relying on the poached egg yolk to be enough yolk. 
+
+                Idea is from [Chef John](https://www.youtube.com/watch?v=yHEl5sUebhk) but I use homemade biscuits instead of English muffins.
+
+                ## Supplies 
+                * Pot
+                * Timer
+                * Mezzaluna (or anything sharp lol)
+                * Slotted spoon
+                            
+                ## Ingredients
+                * 1 egg
+                * pre-packaged smoked salmon
+                * biscuit (from my other recipe!)
+                * dill
+                * butter
+                * lemon zest
+                * rice vinegar
+
+                ## Steps
+                * Chop up dill and zest
+                * Mix butter, dill, zest and pepper
+                * Bring pot of water to a simmer, add splash of rice vinegar
+                * Cook poached egg in simmering water for 5 minutes
+                * Pull egg out with slotted spoon
+                * Spread butter on biscuit, place salmon, then egg
+
+            </script>
+        </zero-md>
+
+    </div>
+
+</body>
+
+</html>
